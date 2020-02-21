@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+  .row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container-fluid {
+  background-color: #999;
+  margin: auto;
+
+}
+.small{
+  width: 13%;
+  display: inline-block;
+  float: left;
+
+}
+
+.container-fluid {
+  width: 1200px;
+}
+
+.jumbotron {
+    background-image: url("images/home-ENTERTAINERS-bh 002.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 725px !important;
+}
+#home{
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(28%);
+    text-transform: uppercase;
+    letter-spacing: 70px;
+    font-size: 6em;
+    font-weight: 300;
+}
+
+.containerNum2 {
+    width: 800px;
+    margin: auto;
+    padding-bottom: 25px;
+}
+
+#intro {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#credit {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+    padding-bottom: 50px;
+}
+
+.containerText {
+    width: 500px;
+    margin: auto;
+}
+
+.graph {
+    font-size: 1.5em;
+    line-height: 25px;
+    text-indent: 20px;
+}
+
+.performer {
+    font-size: 5em;
+    font-weight: 100;
+}
+ul {
+    font-size: 1.5em;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: gray;
+  color: white;
+  font-size: 30px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+span {
+    font-weight: 500;
+}
+
+.prev {
+    color: white !important;
+}
+
+.next {
+    color: white !important;
+
+}
+
+</style>
+</head>
+<body>
+
+
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1 id="home">spotlight</h1>      
+  </div>
+</div>
+
+<div class="container text-center">
+<div class="containerNum2">
+    <h1 id="intro">Introduction</h1>
+  <p class="graph">
+      Lorem ipsum dolor sit amet abore a deleniti quasi quod asperiores, totam culpa? Quam illum vel alias adipisci mollitia autem repellat, ut dolorum quae magni, velit commodi rem enim at.
+      Dolorum vitae eum cupiditate nihil veniam doloribus nisi pariatur, sunt, odio sit saepe commodi dicta dignissimos amet vero temporibus totam illum adipisci magni repudiandae ab recusandae atque. Explicabo, eaque laborum.
+      Obcaecati pariatur quam assumenda minima aut consectetur, laborum corporis rem dolore? Dicta quas nemo cumque fuga a corporis laboriosam neque blanditiis eaque. Asperiores ut ad sint odit minima fuga quisquam.
+  </p>
+  <div id="credit">Photos by Benjamin Hager <span>Las Vegas Review-Journal</span></div>
+   </div>
+ </div>
+</div>
+ <hr>
+<div class="container text-center">
+    <br>    
+    <h3 id="top">Entertainer's Gallery</h3>
+    <p>Click photo to enlarge and name for profile</p>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/small/xs-ENTERTAINERS-bh 020.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#vega">Volmar-Vega</a></h4>
+
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 002.jpg"  onclick="openModal();currentSlide(2)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#amy">Amy Saunders</a></h4>    
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 003.jpg"  onclick="openModal();currentSlide(3)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#murray">Murray Sawchuck</a></h4>
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 004.jpg"  onclick="openModal();currentSlide(4)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#chip">Chippendales</a></h4>
+      </div> 
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 005.jpg"  onclick="openModal();currentSlide(5)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#jaime">Jaime DeRocker</a></h4>
+      </div>     
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 006.jpg"  onclick="openModal();currentSlide(6)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#nature">Human Nature</a></h4>
+      </div> 
+    </div>
+  </div>
+
+
+
+
+<div class="container text-center">    
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/small/xs-ENTERTAINERS-bh 007.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#whitney">Whitney Giron</a></h4>
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 008.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#brett">Brett Hamby</a></h4>    
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 009.jpg" onclick="openModal();currentSlide(9)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#noriko">Noriko Takahashi</a></h4>
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 010.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#carlson">Ryan Carlson</a></h4>
+      </div> 
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 011.jpg" onclick="openModal();currentSlide(11)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#silvia">Silvia & Victor</a></h4>
+      </div>     
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 012.jpg" onclick="openModal();currentSlide(12)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#hamish">Hamish McCann</a></h4>
+      </div> 
+    </div>
+  </div>
+
+
+
+  <div class="container text-center">    
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/small/xs-ENTERTAINERS-bh 013.jpg" onclick="openModal();currentSlide(13)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#alan">Alan Jones Silva</a></h4>
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 014.jpg" onclick="openModal();currentSlide(14)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#mike">Mike Vargovich</a></h4>    
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 015.jpg" onclick="openModal();currentSlide(15)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#jordan">Jordan Kai Burnett</a></h4>
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 016.jpg" onclick="openModal();currentSlide(16)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#blue">Blue Man</a></h4>
+      </div> 
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 017.jpg" onclick="openModal();currentSlide(17)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#misheel">Misheel Nyamkhuu</a></h4>
+      </div>     
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 018.jpg" onclick="openModal();currentSlide(18)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#frankie">Frankie Moreno</a></h4>
+      </div> 
+    </div>
+  </div>
+
+
+
+
+  <div class="container text-center">    
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="images/small/xs-ENTERTAINERS-bh 019.jpg" onclick="openModal();currentSlide(19)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#alfredo">Alfredo & Talia</a></h4>
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 001.jpg" onclick="openModal();currentSlide(20)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#makeda">Makeda Crayton</a></h4>    
+      </div>
+      <div class="col-sm-2"> 
+        <img src="images/small/xs-ENTERTAINERS-bh 021.jpg" onclick="openModal();currentSlide(21)" class="hover-shadow" class="img-responsive" style="width:100%" alt="Image">
+        <h4><a href="#gabryel">Gabryel Da Silva</a></h4>
+      </div>
+      <div class="col-sm-2"> 
+        <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> -->
+        <!-- <p>Partner 4</p> -->
+      </div> 
+      <div class="col-sm-2"> 
+        <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        <p>Partner 5</p> -->
+      </div>     
+      <div class="col-sm-2"> 
+        <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"> -->
+        <!-- <p>Partner 6</p> -->
+      </div> 
+    </div>
+  </div><br>
+
+
+
+<div class="header">
+    <p>"Quote goes here or something important! Quote goes here or something important! 
+        <br>Quote goes here or something important!"</p>
+  </div>
+
+
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 020.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 002.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 003.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 004.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 005.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 006.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">7 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 007.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">8 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 008.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">9 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 009.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">10 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 010.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">11 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 011.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">12 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 012.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">13 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 013.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">14 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 014.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">15 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 015.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">16 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 016.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">17 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 017.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">18 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 018.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">19 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 019.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">20 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 001.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">21 / 21</div>
+        <img src="images/xl-ENTERTAINERS-bh 021.jpg" style="width:100%">
+      </div>
+
+
+
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+    </div>
+</div>
+<!-- 
+<div class="container">
+    <div class="row">
+      <div class="col-xl-">
+        <img src="images/xl-ENTERTAINERS-bh 020.jpg" style="width:100%">
+      </div>
+      <div class="row">
+
+      <div class="col-md-">
+
+      <h3>Phil Burton</h3>
+      <ul>
+
+      <li>Show: Human Nature Sings Motown & More</li>
+      
+        <li>Location: The Venetian Resort / Sands Showroom</li>
+      
+          <li>Years in show: 10</li>
+      
+            <li> Home town: Sydney, Australia</li>
+    </ul>
+      <p>Background training/education: All of us have had singing lessons at various times in our life, as well as a few dance lessons here and there, but nothing formal. The closest thing to formal instruction we received was being part of a school-based entertainment training workshop called the “Talent Development Project” which gave talented young performers a basic grounding in things such as stagecraft, repertoire choices and other facets of live performance.
+      
+      Passions outside of work: Golf - the trick is finding time to pursue it!</p>
+      
+      <p>Favorite things to do in Vegas: Having a glass of wine at the front bar of Mon Ami Gabi. It’s great for people and fountain watching, and you don’t have to wait ages for a balcony table.</p>
+      
+     <p> Most memorable/satisfying moment in the show: Most of our audience have never heard of us or what we do before they see the show, so it’s a nightly challenge for us to convert these people into fans. It’s always a wonderful moment when you can sense the crowd are all on your side, and are really having a great time.  </p>       
+     </div>
+</div> -->
+     
+    <!-- </div> -->
+
+    <!--  ----------------------------------------------------------------------------------------------- -->
+
+    <br>
+    <br>
+    <div class="container">
+        <div  id="vega" class="row">
+          <div class="col-xl-">
+            <img src="images/xl-ENTERTAINERS-bh 020.jpg" style="width:100%">
+          </div>
+          </div>
+          <br>
+
+    <div class="containerText">
+        <div class="row">
+          
+          <div class="col">
+            <h2 class="performer">Valerie Volmar-Vega</h2>
+           
+                <ul>
+                    <li><strong>Show: </strong>Le Rêve – The Dream</li>
+                    <li><strong>Character Played: </strong>Dreamer/Dancer</li>
+                    <li><strong>Location of Show: </strong>Wynn Las Vegas</li>
+                    <li><strong>Years in Show: </strong>10 years</li>
+                    <li><strong>Hometown: </strong>San Juan, Puerto Rico</li>
+                
+                </ul>
+                    <p class="graph"><strong> Background/Training/Education: </strong>Ballet School of Puerto Rico</p>
+                    <p class="graph"><strong> Passions Outside of Work:  </strong>Family time and aesthetics</p>
+                    <p class="graph"><strong> Favorite Things to Do in Vegas: </strong>Hiking</p>
+                    <p class="graph"><strong> Most Memorable/Satisfying Moment from Performing in the Show: </strong>After
+                        finishing the show, bowing and seeing and audience member in tears. 
+                        </p>
+                        <br><h5><a href="#top">Back to top</a></h5>
+                
+                
+        
+        </div>       
+         
+          </div>
+          </div>
+
+          <br>
+          <hr>
+          <br>
+          <br><br>
+
+    
+
+          <div class="container">
+            <div class="row">
+                <div  id="amy" class="col">
+                    <h2 class="performer">Name</h2>
+                      
+                        <ul>
+                            <li><strong>Show:</strong>Human</li>
+                            <li><strong>Show:</strong>Human</li>
+                            <li><strong>Show:</strong>Human</li>
+                            <li><strong>Show:</strong>Human</li>
+                        
+                        </ul>
+                            <p class="graph"><strong> work </strong>Golf</p>
+                            <p class="graph"><strong> work </strong>Golf</p>
+                            <p class="graph"><strong> work </strong>Golf</p>
+                            <p class="graph"><strong> work </strong>Golf</p>
+
+                            <br><h5><a href="#top">Back to top</a></h5>
+
+                        
+                        
+
+
+                </div>
+
+                <div class="col">
+                    <img src="images/square/sq-bh-002.jpg"  style="width:100%">
+                </div>
+
+                </div>
+                </div>
+
+                <br><br>
+                <hr>
+                <br><br><br>
+              
+                <div class="container">
+                    <div class="row">
+                        <div id="murray" class="col">
+                            <img src="images/square/sq-bh-003.jpg"  style="width:100%">
+                        </div> 
+                        <div class="col">
+                            <h2 class="performer">Murray Sawchuck</h2>
+                                <ul>
+                          
+                                <li><strong>Character Played:</strong>Murray The Magician</li>
+                                
+                                  <li><strong>Location: </strong>Tropicana - Laugh Factory</li>
+                                  <li><strong>Years in Show: </strong>4th year at the Tropicana (Did 3 years starting in 2012 then bumped to Planet Hollywood then came back in 2018 to Tropicana)</li>
+                                  <li><strong>Hometown:</strong> Burnaby, British Columbia, Canada (Near Vancouver)</li>
+                                
+                              </ul>
+                                
+                                <p class="graph"><strong>Background/Training/Education: </strong>Started magic when I was 7 years old.
+                                        Toured the world for 18 years performing in Belgium, France, Korea, Tahiti, Lebanon, 
+                                        England, Germany, China, Japan and many other countries. I’m a performer, lecture, writer,
+                                        actor and comedian. I also have a degree in Broadcast communications and a minor in marketing.</p>
+
+                                        <p class="graph"><strong>Passions outside of work: </strong>Working on my old cars; a '73
+        Corvette Stingray, '69 Pontiac Grand Prix and 1991 Nissan Hardbody
+        Pickup. I also have 3 rescue chihuahuas, I’ve rescued 5 chihuahuas in total.
+        Friends For LIfe Humane Society and Waggin' Tails Rescue
+        are a huge passions of mine. I love working in my yard landscaping where I’ve
+        built a waterfall, pond, stone fireplace, mini pitch and putting
+        golf course. I also enjoy seeing and supporting
+        other shows and entertainment in Las Vegas. I love going to shows!</p>
+
+
+        <p class="graph"><strong>Most memorable moment in my show:</strong> When I got to introduce my mom
+        and dad, Arlene and John Sawchuk, in the audience for the first time in my 
+        Las Vegas show at the Tropicana Laugh Factory. It was a "look mom
+        and dad I made it!" moment. Someone captured that exact time when I
+        walked into the audience to give them both a hug and a kiss, and that photo
+        hangs on my wall in my house today. It means even more to me now, after
+        losing my Dad 4 years ago. Mom and dad were married 54 years!</p>
+
+        <br><h5><a href="#top">Back to top</a></h5>
+
+
+                                
+        
+        
+                        </div>
+        
+                    
+                    </div>
+                    </div>
+
+<!--  ----------------------------------------------------------------------------------------------- -->
+<br><br>
+<hr>
+<br><br>
+
+<br>
+<br>
+<div class="container">
+    <div id="chip"  class="row">
+      <div class="col-xl-">
+        <img src="images/xl-ENTERTAINERS-bh 004.jpg" style="width:100%">
+      </div>
+      </div>
+      <br>
+  
+    
+
+<div class="containerText">
+    <div class="row">
+      
+      <div class="col">
+        <h2 class="performer">Chippendales</h2>
+        <ul>
+            <li><strong>Show: </strong>Chippendales</li>
+            <li><strong>Location: </strong>Rio</li>
+            </ul>
+            <br>
+            <br>
+
+        <h2 class="performer">Jon Howes</h2>
+            <ul>
+        
+                <li><strong>Years in show: </strong>8</li>
+                <li><strong>Role In Show: </strong>Chippendales Dancer</li>
+            
+            </ul>
+                <p class="graph"><strong> Hometown: </strong>Pittsfield, MA</p>
+                <p class="graph"><strong> Background training/education: </strong>UNLV Business</p>
+                <p class="graph"><strong> Passions outside of work: </strong>Travel</p>
+                <p class="graph"><strong> Favorite thing to do in Vegas: </strong>Anything downtown!</p>
+                <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>Seeing people let loose and enjoy 
+                    themselves
+                    </p>
+                    <br>
+
+                    <h2 class="performer">Ryan Worley</h2>
+
+
+                 <ul>
+    <li><strong>Years in show: </strong>2</li>
+    <li><strong>Hometown: </strong>Danville, Calif. </li>
+ 
+
+</ul>
+    <p class="graph"><strong> Background training/education: </strong>Criminal justice, certified personal trainer. Bodybuilding background. No formal dance training.</p>
+    <p class="graph"><strong> Passions outside of work: </strong>Bodybuilding, playing the guitar, long distance shooting, hiking.</p>
+    <p class="graph"><strong> Favorite things to do in Vegas: </strong> Vegas has some of the best restaurants and shows, so whenever I have free time I try to see another show and have a nice meal out. 
+    </p>
+    <p class="graph"><strong> Most memorable moment in the show: </strong>I have so many, but the two that come to mind is making the cover of the 2020 calendar, as well as flying to LA to wake up Jimmy Kimmel for his birthday at his house. 
+    </p>
+<br>
+
+    <h2 class="performer">Ryan Kelsey</h2>
+
+
+    <ul>
+<li><strong>Years in show::</strong>6</li>
+<li><strong>Hometown:</strong>Las Vegas NV</li>
+
+
+</ul>
+<p class="graph"><strong> Background training/education: </strong> My mom taught at a local dance studio, Fern Adair’s Conservatory of the Arts, so I was trained there in ballet, jazz, tap, modern, and Pas de Deux. I did 10 years of Vegas shows, musicals, tours, and cruise ships before joining Chippendales!</p>
+<p class="graph"><strong> Passions outside of work: </strong>One of my biggest passions is music, but that’s not really outside of work anymore because they let me play my guitar in the show!  But I’d say traveling is my next biggest passion. If there’s a chance to see a new area of the world and a new culture, I’m always down!!
+</p>
+<p class="graph"><strong> Favorite thing to do in Vegas: </strong>I think since my job involves the most “Vegas-y” parts of Vegas (being near the strip, loud party music, etc), my favorite things to do here are surprisingly normal. Find a new niche restaurant, go to the corner bar, see a movie at a lux theater. I like my life outside of the show to be fairly pedestrian.  </p>
+<p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>As much as there’s incredible moments every night ON the stage, the memories of the show I hold dearest happen BEHIND the stage. I couldn’t ask for a better group of guys to work with. They truly are the brothers I’ve never had, and the amount of fun we have backstage is nearly criminal. I’ve never once walked out of that show in a worse mood than I walked in with. It’s amazing!
+</p>
+
+<br><h5><a href="#top">Back to top</a></h5>
+
+
+                
+            
+    
+    </div>       
+     
+      </div>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+      <br><br>
+     
+      <div class="container">
+        <div class="row">
+            <div id="whitney"  class="col">
+                <h2 class="performer">Whitney Giron</h2>
+               
+                    <ul>
+                        <li><strong>Show: </strong>X Burlesque</li>
+                        <li><strong>Location: </strong>Flamingo Las Vegas</li>
+                        <li><strong>Years in Show: </strong>Six years</li>
+                        <li><strong>Hometown: </strong>Carson City, NV</li>
+                    
+                    </ul>
+                        <p class="graph"><strong> Character/Acts: </strong>I am in the acts “Dazed and Confused” and am the
+                            featured performer in our “Good Girl” number.
+                            </p>
+                        <p class="graph"><strong> Background/Training/Education: </strong>I started taking dance classes at the
+                            age of five. I grew up competing for my studio’s dance competition
+                            team. At the age of nine, I started performing in local musical
+                            theatre productions and stayed with the company until I graduated from high
+                            school and moved to Las Vegas.
+                            </p>
+                        <p class="graph"><strong> Passions Outside of Work: </strong>I love to be outdoors. Hiking, kayaking and
+                            biking are among some of my favorite activities.
+                            </p>
+                        <p class="graph"><strong> Favorite thing to do in Vegas: </strong>My favorite thing to do in Vegas is go
+                            to Golden Knights games. GO KNIGHTS GO!
+                            </p>
+                        <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>Performing on a nightly
+                            basis is so satisfying in itself. I love being able to play many
+                            different characters throughout the show. From the racy and
+                            provocative to the playful and coquettish. I get to do it all!
+                            </p>
+
+                            <br><h5><a href="#top">Back to top</a></h5>
+
+
+
+                    
+                    
+
+            </div>
+
+            <div class="col">
+                <img src="images/square/sq-bh-007.jpg"  style="width:100%">
+            </div>
+
+            </div>
+            </div>
+
+            <br><br>
+            <hr>
+            <br><br><br>
+         
+            <div class="container">
+                <div id="brett" class="row">
+                    <div class="col">
+                        <img src="images/square/sq-bh-008.jpg"  style="width:100%">
+                    </div> 
+                    <div class="col">
+                        <h2 class="performer">Brett Hamby</h2>
+                            <ul>
+                                <li><strong>Show: </strong>Le Rêve – The Dream</li>
+                                <li><strong>Character Played: </strong>Generalist</li>
+                                <li><strong>Location: </strong>Wynn Las Vegas</li>
+                                <li><strong>Years in Show: </strong>4 years</li>
+                                <li><strong>Hometown: </strong>Pacifica, California</li>
+
+                            
+                            </ul>
+                                <p class="graph"><strong> Background/Training/Education: </strong>Gymnastics, dance,acting. I have a chemistry
+                                    degree from the University of California Irvine, with a  drama minor. 
+                                    </p>
+                                <p class="graph"><strong> Passions Outside of Work: </strong>Playing with my pups, coffee, going dancing, hiking and traveling.</p>
+                                <p class="graph"><strong> Favorite Things to Do in Vegas: </strong>Seeing shows, visiting cafes and watching the Bellagio Fountains.</p>
+                                <p class="graph"><strong> Most Memorable/Satisfying Moment from performing in the show: </strong>Most
+                                    memorable; Improvising during a long show hold. It was fun interacting
+                                    with the crowd in a different way. Most Satisfying; Learning aerial
+                                    rope and performing my triple off of “Tritons.”
+                                    </p>
+
+                                    <br><h5><a href="#top">Back to top</a></h5>
+
+                            
+                            
+    
+                    </div>
+    
+                
+                </div>
+                </div>
+
+<!--  ----------------------------------------------------------------------------------------------- -->
+<br><br>
+<hr>
+<br><br>
+
+<br>
+<br>
+<div class="container">
+    <div id="jaime" class="row">
+      <div class="col-xl-">
+        <img src="images/xl-ENTERTAINERS-bh 005.jpg" style="width:100%">
+      </div>
+      </div>
+      <br>
+      
+     
+
+<div class="containerText">
+    <div class="row">
+      
+      <div class="col">
+        <h2 class="performer">Jaime DeRocker</h2>
+        
+            <ul>
+                <li><strong>Show: </strong> Nevada Ballet Theatre</li>
+                <li><strong>Years working with NBT: </strong>I am about to start my third season.</li>
+                <li><strong>Hometown: </strong>Oneida, New York</li>
+            
+            </ul>
+                <p class="graph"><strong> Favorite Roles I’ve danced with Nevada Ballet Theatre: </strong>Gerald Arpino’s Light Rain Pas de deux with Steven Goforth, George Balanchine’s Serenade, Yuri Possokhov’s Firebird, Ben Stevenson’s Dracula, Paul Taylor’s Company B, to name a few of my favorites.</p>
+                <p class="graph"><strong> Background/training education: </strong>I grew up dancing and training in both a competition dance school and an R.A.D. accredited ballet school at the same time. At 15 years old, I decided to finish my high school training at The Harid Conservatory. From there I had the wonderful opportunity to gain experience and dance with the Colorado Ballet, Ballet West and Festival Ballet Providence. I attended a summer intensive in 2015 at Nederlands Dans Theatre that changed my life and perspective on dance. </p>
+                <p class="graph"><strong> Passions outside of work: </strong>I absolutely love music, going to live shows, supporting my fellow performer/entertainer friends in other shows around Vegas, and exploring all the new and exciting things that Vegas has to offer.</p>
+                <p class="graph"><strong> Favorite thing to do in Vegas: </strong>My favorite thing to do in Vegas, hands down, is take advantage of the never-ending offerings of live shows. I never turn down an invitation to attend a show. I think I’ve seen The Beatles LOVE almost 10 times! </p>
+                <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>I will never forget the curtain going up at The Smith Center (my favorite theatre I have performed in to date, and I’m so incredibly lucky to be able to perform there) at the opening of George Balanchine’s Serenade. The company last performed it in the fall of 2017. The opening image that is revealed includes the entire female corps de ballet. It is so stunning, and the audience immediately began to applaud. In that moment, a tear streamed down my face and I could not have been happier. I was so proud and excited. I knew I was exactly where I needed to be. </p>
+
+                <br><h5><a href="#top">Back to top</a></h5>
+
+
+            
+            
+    
+    </div>       
+     
+      </div>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+      <br><br>
+     
+      <div class="container">
+        <div class="row">
+            <div id="noriko" class="col">
+                <h2 class="performer">Noriko Takahashi</h2>
+                
+
+                    <ul>
+                        <li><strong>Show: </strong>KÀ by Cirque du Soleil</li>
+                        <li><strong>Location: </strong>MGM Grand </li>
+                        <li><strong>Character: </strong>Diana, chief archer’s daughter.</li>
+                        <li><strong>Hometown: </strong>Yokohama, Japan</li>
+                    
+                    </ul>
+                        <p class="graph"><strong> Years in show: </strong>Since the very beginning. I am part of the original
+                            cast. There was about 1 year of creation time before opening the show,
+                            so 15 years with the company.
+                            </p>
+                        <p class="graph"><strong> Background/Training/Education: </strong>Baton twirling coached by Chiyoko
+                            Koyano. I also took some dance classes such as classic ballet, jazz,
+                            Modern and I even tried hip hop classes!
+                            </p>
+                        <p class="graph"><strong> Passions outside of the show: </strong>My passion has always been baton
+                            twirling, but outside of that, I like to build things. My favorite
+                            creation was a shoe rack using stilts which were used when Cirque du
+                            Soleil attempted to break the Guinness World Record for the most
+                            people to simultaneously walk on stilts in celebration of the
+                            company’s 25th anniversary. My next project is making a swamp cooler.
+                            </p>
+                        <p class="graph"><strong> Favorite thing to do in Vegas: </strong>Going to Red Rock Canyon.</p>
+                        <p class="graph"><strong> Satisfying moment while performing: </strong> I enjoy preparing for the show as
+                            much as performing. My most satisfying moment while performing is when
+                            I feel a connection with the audience.
+                            </p>
+
+                            <br><h5><a href="#top">Back to top</a></h5>
+
+
+                    
+                    
+
+
+            </div>
+
+            <div class="col">
+                <img src="images/square/sq-bh-009.jpg"  style="width:100%">
+            </div>
+
+            </div>
+            </div>
+        
+            <br><br>
+            <hr>
+            <br><br><br>
+
+            <div class="container">
+                <div class="row">
+                    <div id="silvia" class="col">
+                        <img src="images/square/sq-bh-011.jpg"  style="width:100%">
+                    </div> 
+                    <div class="col">
+                        <h2 class="performer">Silvia Silvia & Victor Ponce</h2>
+                            <ul>
+                                <li><strong>Show: </strong>WOW-The Vegas Spectacular</li>
+                                <li><strong>Location: </strong>Rio All-Suite Hotel & Casino</li>
+                                <li><strong>Characters: </strong>Silvia Silvia (Crossbows act), Victor Ponce (Pirate)</li>
+                                <li><strong>Hometown: </strong>Barcelona, Spain</li>
+                            
+                            </ul>
+                                <p class="graph"><strong> Years in show: </strong>All our lives, Silvia is a third generation show
+                                    artist. Victor Ponce is a fourth generation of show artist.
+                                    </p>
+                                <p class="graph"><strong> Background training/education: Silvia: </strong> I had my education in a
+                                    Catholic school, and at the same time I started to train for the show.
+                                    I also trained as an aerialist, balancing act, high wire act,
+                                    acrobatic act  and Ice skater and now the crossbow act that I learned
+                                    when I was very young, which has taken me to work in shows around the
+                                    globe. Now I perform this amazing act in WOW - The Vegas Spectacular.
+                                    I am the only woman who risks her life in each show shooting an apple
+                                    off her own head.
+                                    </p>
+                                <p class="graph"><strong> Victor: </strong>t a young age, I began training as a juggler and have
+                                    continued training in various shows. I also do acrobatic juggling, foot juggling, and mastered my juggling skills skating on ice, putting together a great act that allowed Silvia and I
+                                    to work in the most renowned ice shows around the world. Now we are so happy to be performing nightly at the Rio Hotel in  WOW - The Vegas Spectacular.
+                                    </p>
+                                <p class="graph"><strong> Passions outside of work: </strong>We enjoy the simple things in life like
+                                    cooking and going to the gym. Silvia's hobby is to design and create
+                                    her own show costumes, while I enjoy having a nice "siesta."
+                                    </p>
+                                <p class="graph"><strong> Favorite things to do in Vegas: </strong>Just to be in Vegas is a great joy.
+                                    We like to go shopping, go to shows, dining out, meet up with
+                                    friends and also in our spiritual life. We go to Catholic church every
+                                    Sunday to thank god for a blessed life, and to have a wonderful family.
+                                    </p>
+                                <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>We are happy that the
+                                    show is doing so well, and audiences from all over the world enjoy what
+                                    we do. We are thrilled to have performed over 850 successful shows so
+                                    far and to have won four "Best of  Vegas” awards in four different
+                                    categories.
+                                    </p>
+
+                                    <br><h5><a href="#top">Back to top</a></h5>
+
+                            
+                              
+    
+    
+                    </div>
+    
+                
+                </div>
+                </div>
+
+<!--  ----------------------------------------------------------------------------------------------- -->
+<br><br>
+<hr>
+<br><br>
+
+
+<br>
+<br>
+<div class="container">
+    <div id="nature" class="row">
+      <div class="col-xl-">
+        <img src="images/xl-ENTERTAINERS-bh 006.jpg" style="width:100%">
+      </div>
+      </div>
+      <br>
+
+<div class="containerText">
+    <div class="row">
+      
+      <div class="col">
+        <h2 class="performer">Human Nature Sings Motown & More</h2>
+        <ul>
+            <li><strong>Show: </strong>Human Nature Sings Motown & More</li>
+            <li><strong>Location: </strong>The Venetian Resort / Sands Showroom</li>
+            <li><strong>Years in show: </strong>10</li>
+            <li><strong>Hometown: </strong>Sydney, Australia</li>
+
+        
+        </ul>
+        <br>
+        <br>
+        <h2 class="performer">Andrew Tierney</h2>
+
+                <p class="graph"><strong> Background training/education: </strong>High School Certificate</p>
+                <p class="graph"><strong> Passions outside of work: </strong>Faith, family and fitness </p>
+                <p class="graph"><strong> Favorite thing to do in Vegas: </strong>Christmas</p>
+                <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>Performing our 2000th show. A pretty amazing number!!</p>
+
+<br>
+                <h2 class="performer">Michael Tierney</h2>
+
+                    <p class="graph"><strong> Background training/education: </strong>Classical singing & piano lessons from an early age.</p>
+                    <p class="graph"><strong> Passions outside of work: </strong>Family, being a dad to my beautiful daughter, traveling to new places, music and songwriting.</p>
+                    <p class="graph"><strong> Favorite things to do in Vegas: </strong>Visit the Bellagio Conservatory. Love the ever changing displays they create. 
+                    </p>
+                    <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>Seeing the audience on their feet having a great time at the end of our show.
+                    </p>
+                    <br>
+                
+            
+                    
+                    <h2 class="performer">Phil Burton</h2>
+
+                        <p class="graph"><strong> Background training/education: </strong>All of us have had singing lessons at various times in our life, as well as a few dance lessons here and there, but nothing formal. The closest thing to formal instruction we received was being part of a school-based entertainment training workshop called the “Talent Development Project” which gave talented young performers a basic grounding in things such as stagecraft, repertoire choices and other facets of live performance.</p>
+                        <p class="graph"><strong> Passions outside of work: </strong>Golf - the trick is finding time to pursue it!</p>
+                        <p class="graph"><strong> Favorite things to do in Vegas: </strong>Having a glass of wine at the front bar of Mon Ami Gabi. It’s great for people and fountain watching, and you don’t have to wait ages for a balcony table.</p>
+                        <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>Most of our audience have never heard of us or what we do before they see the show, so it’s a nightly challenge for us to convert these people into fans. It’s always a wonderful moment when you can sense the crowd are all on your side, and are really having a great time. </p>
+                    
+            
+                        <br>
+                        <h2 class="performer">Toby Allen</h2>
+
+                            <p class="graph"><strong> Background training/education: </strong> I learned classical piano from the age of about 4 and I have always sung in choirs from the same age. The most formal training I have ever had would have been some singing lessons around when I was finishing up high school. The rest of my performance training has pretty much been on the stage; probably one of the best places to learn.</p>
+                            <p class="graph"><strong> Passions outside of work: </strong> I love exploring the outdoors with my family, and in particular the national parks that America has to offer. Whenever we have a break we will often go camping. Yellowstone has probably been my favorite so far.</p>
+                            <p class="graph"><strong> Favorite things to do in Vegas: </strong>One of my favorite things to do is go up to Mt. Charleston. I go up there at all times of the year. It’s fun with the kids in the winter and it’s usually 20 degrees cooler in the summer, which is a nice escape from the heat.</p>
+                            <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong> It doesn’t happen that often, but occasionally a couple will get up and dance to a particular song that obviously has significance to them. It is such a great feeling to know that we are part of a moment where people are reliving a wonderful memory from their lives, and at the same time creating new ones for them.</p>
+                        
+                            <br><h5><a href="#top">Back to top</a></h5>
+
+            
+            
+       
+    
+    </div>       
+     
+      </div>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+      <br><br>
+      
+   
+      <div class="container">
+        <div class="row">
+            <div id="hamish" class="col">
+                <h2 class="performer">Hamish McCann</h2>
+                
+                    <ul>
+                        <li><strong>Show: </strong>Absinthe</li>
+                        <li><strong>Location: </strong> Caesars Palace</li>
+                        <li><strong>Character Played: </strong>Acrobatic Pole Dancer</li>
+                        <li><strong>Hometown: </strong>The land down under.</li>
+                    
+                    </ul>
+                        <p class="graph"><strong> Years in show: </strong>I’ve been in ABSINTHE for just over a year, but The
+                            Gazillionaire and I go way back.
+                            </p>
+                        <p class="graph"><strong> Background training/education: </strong>Sometimes you have to take on a unique
+                            trade to pay your way through circus school and pole dancing was mine. I’ve just found a
+                            way to take it to the next level.
+                            </p>
+                        <p class="graph"><strong> Passions outside of work: </strong>Fitness and the great outdoors. And a nice
+                            pint, or three.
+                            </p>
+                        <p class="graph"><strong> Favorite thing to do in Vegas: </strong>Whenever I see a lamp post, I can’t
+                            resist climbing it. And of course, a day at the wave pool. It reminds me of home and keeps me tan.
+                            </p>
+                        <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>The cheers. When I hit
+                            that pole, the ladies, and even some of the gents, go nuts.
+                            </p>
+
+                            <br><h5><a href="#top">Back to top</a></h5>
+
+
+                    
+                    
+
+            </div>
+
+            <div class="col">
+                <img src="images/square/sq-bh-012.jpg"  style="width:100%">
+            </div>
+
+            </div>
+            </div>
+   
+            <br><br>
+            <hr>
+            <br><br><br>
+
+            <div class="container">
+                <div class="row">
+                    <div id="alan"  class="col">
+                        <img src="images/square/sq-bh-013.jpg"  style="width:100%">
+                    </div> 
+                    <div class="col">
+                        <h2 class="performer">Alan Jones Silva</h2>
+                    
+                            <ul>
+                                <li><strong>Show: </strong>Zumanity</li>
+                                <li><strong>Location: </strong>New York/New York</li>
+                                <li><strong>Character: </strong>My role in the show is Aerial silks.</li>
+                                <li><strong>Hometown: </strong>I was born in São Paulo, Brazil but I grew up traveling the
+                                    whole country.
+                                    </li>
+                            
+                            </ul>
+                                <p class="graph"><strong> Years in the show: </strong>I have been with the show since it opened in 2003,
+                                    so it’s been sixteen years. I had the pleasure to be part of the
+                                    creation and help create the show.
+                                    </p>
+                                <p class="graph"><strong> Background training/education: </strong> I was born into a traditional circus
+                                    family. I’m the sixth generation. I started training at the age of
+                                    four and performing professionally at six years old. I traveled and
+                                    worked with many different shows and did many different disciplines,
+                                    from flying trapeze to Russian bars to straps and aerial silks. I also
+                                    was a clown, but didn’t want to pursue this path since it is viewed as
+                                    a stereotype for little person like me. Didn’t want to be funny. I
+                                    wanted to do something unique and different.
+                                    </p>
+                                <p class="graph"><strong> Passions outside of work: </strong> I love music. I like a nice glass of wine
+                                    and singing and playing some tunes with my acoustic guitar.
+                                    </p>
+                                <p class="graph"><strong> Favorite thing to do in Vegas: </strong>My favorite thing to do in Vegas is
+                                    spend time with my wife, my four year old son and my six month old
+                                    baby girl. When they are old enough I will take them to watch different shows on the strip.
+                                    </p>
+                                <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>When I get a standing
+                                    ovation at the end of my act. How people tell me how I touched their
+                                    lives with my performance. It leads them to tears.
+                                    </p>
+
+                                    <br><h5><a href="#top">Back to top</a></h5>
+
+
+                            
+                            
+    
+                    </div>
+    
+                
+                </div>
+                </div>
+
+<!--  ----------------------------------------------------------------------------------------------- -->
+<br><br>
+<hr>
+<br><br>
+ 
+            
+
+<br>
+<br>
+<div class="container">
+    <div id="carlson" class="row">
+      <div class="col-xl-">
+        <img src="images/xl-ENTERTAINERS-bh 010.jpg" style="width:100%">
+      </div>
+      </div>
+      <br>
+
+<div class="containerText">
+    <div class="row">
+      
+      <div class="col">
+        <h2 class="performer">Ryan Carlson</h2>
+
+            <ul>
+                <li><strong>Show: </strong>MAGIC MIKE LIVE Las Vegas
+                </li>
+                <li><strong>Years in show: </strong>2, since the show premiered at Hard Rock Hotel in April 2017.</li>
+                <li><strong>Hometown: </strong>Jacksonville, FL</li>
+            
+            </ul>
+                <p class="graph"><strong> Background training/education: </strong> I started dancing recreationally at Center Stage Dance Company when I was 12. Once I started taking it more seriously, I auditioned for Douglas Anderson School Of The Arts, which I completed while also going to high school. </p>
+                <p class="graph"><strong> Passions outside of work: </strong>One of my biggest passions is working out. It's almost a type of therapy for me. But my greatest passion is, hands down, being as good a dad as I can be for my beautiful daughter.
+                </p>
+                <p class="graph"><strong> Favorite thing to do in Vegas: </strong> I love to go camping and explore all the things that Vegas has to offer that are off of The Strip. </p>
+                <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>For me, it’s as simple as seeing people smile, which, luckily, we see a lot of. I want everyone who sees the show to leave happier than when they arrived. 
+                </p>
+            
+                <br><h5><a href="#top">Back to top</a></h5>
+
+            
+      
+    
+    </div>       
+     
+      </div>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+      <br><br>
+      
+      
+      <div class="container">
+        <div class="row">
+            <div id="mike"  class="col">
+                <h2 class="performer">Mike Vargovich</h2>
+
+                    <ul>
+                        <li><strong>Show: </strong>Clown Bar</li>
+                        <li><strong>Location: </strong>Majestic Repertory Theatre</li>
+                        <li><strong>Character played: </strong>Dusty, aka The Crooner</li>
+                        <li><strong>Hometown: </strong>Buffalo, NY</li>
+                    
+                    </ul>
+                        <p class="graph"><strong> Years in show: </strong>One year. The original Las Vegas Clown Bar cast was put
+                            together two years ago and I’ve been involved since August 2018.
+                            </p>
+                        <p class="graph"><strong> Background training/education: </strong>Zero formal clown training. I just put
+                            on the face and let it take over. I learned from watching everyone in
+                            the original cast transform from people I knew into their respective
+                            clowns. I’m very much an observer. I never took well to classes or
+                            even workshops in the past. I’m someone who just kind of needs to go
+                            out and do it.
+                            </p>
+                        <p class="graph"><strong> Passions outside of work: </strong>I have an insatiable thirst for reading
+                            biographies on comedians, and would call myself a novice book
+                            collector. When I joined Clown Bar I did a deep dive on Emmett Kelly
+                            and “Weary Willie,” to whom my Dusty is obviously a direct nod, and
+                            that led to an appreciation of clowning as an art, and of its place in
+                            history. Then I feel like I’m going on stage with some context.
+                            Favorite thing to do in Vegas: Anything that puts me in touch with the
+                            history of this place. I’ve served as impromptu tour guide for
+                            tourists waiting to cross the street on the Strip just because the
+                            history of Las Vegas fascinates me so much. I’ll spend all day in the
+                            Mob Museum or exploring a barren ghost town if you leave me to it.
+                            </p>
+                        <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>Just being able to
+                            perform at Majestic Rep. There’s an energy in that space you don’t
+                            feel anywhere else. As an independently run storefront theatre it
+                            encompasses the best of what that distinction implies. It’s gritty,
+                            it’s grassroots, and when you’re there you feel like your witness to
+                            the beginning of a larger vision. Troy Heard challenges his actors as
+                            well as his audiences in the tradition of so many groundbreaking
+                            theatre companies.
+                            </p>
+
+                            <br><h5><a href="#top">Back to top</a></h5>
+
+                    
+                    
+                   
+
+
+            </div>
+
+            <div class="col">
+                <img src="images/square/sq-bh-014.jpg"  style="width:100%">
+            </div>
+
+            </div>
+            </div>
+
+            <br><br>
+            <hr>
+            <br><br><br>
+            
+           
+            <div class="container">
+                <div class="row">
+                    <div id="jordan" class="col">
+                        <img src="images/square/sq-bh-015.jpg"  style="width:100%">
+                    </div> 
+                    <div class="col">
+                        <h2 class="performer">Jordan Kai Burnett</h2>
+                     
+                            <ul>
+                                <li><strong>Show: </strong>MAGIC MIKE LIVE Las Vegas</li>
+                                <li><strong>Location: </strong>Hard Rock Hotel</li>
+                                <li><strong>Character: </strong>Emcee</li>
+                                <li><strong>Years in show: </strong>Less than a year</li>
+                                <li><strong>Hometown: </strong>Astoria, Queens, New York.</li>
+
+                            
+                            </ul>
+                                <p class="graph"><strong> Background training/education: </strong>I have a Bachelor of Fine Arts in
+                                    Musical Theater from Emerson College, and also studied at the
+                                    University of California, Berkeley, The Groundlings and Circle in the
+                                    Square. I have had leading roles in “Scissorhands” the musical and
+                                    “Romy & Michele's HS Reunion the Musical.” Lastly, I am the Co-creator
+                                    of "Daisy and Jordan's Sunday Brunch of Shame” with Tony Award-winner
+                                    Daisy Eagan.
+                                    </p>
+                                <p class="graph"><strong> Passions outside of work: </strong>Outside of work, my biggest passions are my
+                                    band, @STOPTHRUST, and my dog, Ernie. When I'm not at MAGIC MIKE LIVE
+                                    or taking my pup on an adventure, I am somewhere in Las Vegas working
+                                    on "band stuff." Sounds pretty rock 'n roll when I say it like that...
+                                    but I love writing and playing music with these boys more than I can say.
+                                    Can't wait to bring them out to Vegas and show Sin City how we do it.
+                                    </p>
+                                <p class="graph"><strong> Favorite thing to do in Vegas: </strong>Since I'm still fairly new
+                                    to town, my favorite thing to do in Vegas is search for the best dive
+                                    bar and the best pizza. So far, Double Down Saloon has my heart, but
+                                    I’m still in search for that pizza that will hit the spot when I'm feeling
+                                    homesick. Other than that, Market in the Alley in downtown is
+                                    incredible, especially Excuse Moi, which is a speakeasy with a silent
+                                    disco inside. It’s heaven.
+                                    </p>
+                                <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong> There are two moments in
+                                    the show that gets me every night. The first is in the opening number;
+                                    I'm surrounded by the guys right before the beat of the next song
+                                    drops and it feels like we are gearing up to go into battle. For a
+                                    moment, it is about us and the show, and I feel powerful as hell. The
+                                    second is at the end of the show, before my final exit, when I get to
+                                    have a sincere, albeit cheeky, moment with my fellow queens in the
+                                    audience. Even though we are having a laugh, I get to remind them that
+                                    who they are, just as they are, is enough. Again, in empowering other
+                                    women, I get to feel powerful too.
+                                    </p>
+
+                                    <br><h5><a href="#top">Back to top</a></h5>
+
+                            
+                            
+    
+    
+                    </div>
+    
+                
+                </div>
+                </div>
+
+<!--  ----------------------------------------------------------------------------------------------- -->
+
+<br><br>
+<hr>
+<br><br>
+
+<br>
+<br>
+<div class="container">
+    <div id="blue" class="row">
+      <div class="col-xl-">
+        <img src="images/xl-ENTERTAINERS-bh 016.jpg" style="width:100%">
+      </div>
+      </div>
+      <br>
+
+<div class="containerText">
+    <div class="row">
+      
+      <div class="col">
+        <h2 class="performer">The Blue Man Group</h2>
+
+        <ul>
+            <li><strong>Show: </strong>Blue Man Group</li>
+            <li><strong>Location: </strong>Luxor Hotel and Casino</li>
+            <li><strong>Character played: </strong>Left Blue Man</li>
+            <li><strong>Years in show: </strong>27</li>
+            <li><strong>Hometown: </strong>Astor Place Theatre, New York, New York</li>
+
+        
+        </ul>
+            <p class="graph"><strong> Background training/education: </strong>On the job training. Existing in constant stasis of observation both in and outside society and culture. Also a few cooking classes at night school.
+            </p>
+            <p class="graph"><strong> Passions outside of work: </strong>Sliding down the pyramid.</p>
+            <p class="graph"><strong> Favorite thing to do in Vegas: </strong>Redirecting the Luxor light onto poorly placed vegetable gardens and visiting the Hoover Dam.</p>
+            <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>The moment the audience embraces the joy of letting go!
+            </p>
+
+            <br><h5><a href="#top">Back to top</a></h5>
+
+        
+        
+      
+    
+    </div>       
+     
+      </div>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+      <br><br>
+
+      
+      <div class="container">
+        <div class="row">
+            <div id="frankie"  class="col">
+                <h2 class="performer">Frankie Moreno</h2>
+                    <ul>
+                        <li><strong>Show: </strong>Frankie Moreno</li>
+                        <li><strong>Location: </strong>Southpoint Hotel and Smith Center for Performing Arts.</li>
+                        <li><strong>Character Played: </strong>Frankie Moreno :)</li>
+                        <li><strong>Years in show: </strong>My whole life:)</li>
+                        <li><strong>Hometown: </strong>Santa Cruz, Calif.</li>
+
+                    
+                    </ul>
+                        <p class="graph"><strong> Background training/education: </strong>Piano lessons as a child, vocal
+                            Lessons while in high school. I took college courses for music
+                            theory etc.
+                            </p>
+                        <p class="graph"><strong> Passions outside of work: </strong>My passion is writing music. I don’t have a
+                            lot of “outside work” passions because music is kinda my whole life. I
+                            do love cooking, riding motorcycles, and traveling.
+                            </p>
+
+                            <br><h5><a href="#top">Back to top</a></h5>
+
+                        
+                    
+
+
+            </div>
+
+            <div class="col">
+                <img src="images/square/sq-bh-018.jpg"  style="width:100%">
+            </div>
+
+            </div>
+            </div>
+
+            <br><br>
+            <hr>
+            <br><br><br>
+
+            <div class="container">
+                <div id="alfredo" class="row">
+                    <div class="col">
+                        <img src="images/square/sq-bh-019.jpg"  style="width:100%">
+                    </div> 
+                    <div class="col">
+                        <h2 class="performer">Alfredo Silva & Talia</h2>
+                      
+                        <ul>
+                            <li><strong>Show: </strong> Celestia</li>
+                            <li><strong>Character Played: </strong> I perform in Deadly Games</li>
+                            <li><strong>Location of show: </strong> The STRAT</li>
+                            <li><strong>Years in show: </strong> The show opened June 5, 2019, and this is my first year in the show.</li>
+                        
+                        </ul>
+                            <p class="graph"><strong> Hometown: </strong>São Paulo, Brazil. I moved to Las Vegas in 2016 for my very first AGT audition, and now consider Las Vegas to be my hometown.</p>
+                            <p class="graph"><strong> Background training/education: </strong>As a 6th generation circus performer, I learned everything from my family. Over the years, I’ve learned different acts including juggling, clowning, magic, Globe of Death, flying trapeze and of course, the knife throwing.
+                            </p>
+                            <p class="graph"><strong> Passions outside of work: </strong>I’m very passionate about Brazilian Jiu Jitsu. BJJ is a Brazilian martial art known as “the smooth art,” which allows a small person to submit a bigger opponent using leverage techniques.</p>
+                            <p class="graph"><strong> Favorite thing to do in Vegas: </strong>I love all the amazing food that Las Vegas has to offer.</p>
+                        
+                            <br><h5><a href="#top">Back to top</a></h5>
+
+    
+    
+                    </div>
+    
+                
+                </div>
+                </div>
+
+<!--  ----------------------------------------------------------------------------------------------- -->
+
+<br><br>
+<hr>
+<br><br>
+
+<br>
+<br>
+<div class="container">
+    <div id="misheel" class="row">
+      <div class="col-xl-">
+        <img src="images/xl-ENTERTAINERS-bh 017.jpg" style="width:100%">
+      </div>
+      </div>
+      <br>
+      
+      
+<div class="containerText">
+    <div class="row">
+      
+      <div class="col">
+        <h2 class="performer">Misheel Nyamkhuu</h2>
+
+        <ul>
+            <li><strong>Show:</strong> Celestia</li>
+            <li><strong>Character Played:</strong> Contortionist</li>
+            <li><strong>Location:</strong> The STRAT</li>
+            <li><strong>Hometown:</strong> Las Vegas, Nevada</li>
+        
+        </ul>
+            <p class="graph"><strong> Background training/education: </strong>I graduated in Mongolia.</p>
+            <p class="graph"><strong> Passions outside of work: </strong> I enjoy all things beauty; makeup, skincare, nail care.
+            </p>
+            <p class="graph"><strong> Favorite thing to do in Vegas: </strong> I love exploring Las Vegas, especially the shopping.</p>
+            <p class="graph"><strong> Most memorable/satisfying moment in the show: </strong>There are so many memorable moments in the show, but the first rehearsals are what stands out to me the most. We all don’t know each other yet, but it’s an amazing time to learn about everyone and see all their talents.</p>
+        
+            <br><h5><a href="#top">Back to top</a></h5>
+
+       
+    
+    </div>       
+     
+      </div>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+      <br><br>
+                    
+      
+      <div class="container">
+        <div class="row">
+            <div id="makeda" class="col">
+                <h2 class="performer">Makeda Crayton</h2>
+                    <ul>
+              
+                    <li><strong>Character: </strong>African Queen</li>
+
+                        <li><strong>Show: </strong>Zumanity</li>
+                        
+                        <li><strong>Location: </strong>New York/New York</li>
+                        
+                        <li><strong>Years in show: </strong>6 years</li>
+                        
+                        <li><strong>Hometown: </strong>Chicago, IL</li>
+                  </ul>
+                    <p class="graph"><strong> Background training/education:</strong> I started studying many different
+                        dance techniques from the age of 3; including ballet, modern, jazz,
+                        african, tap and various latin dance styles. I have a bachelor’s of
+                        science degree in biology.
+                        </p>
+                    
+                    <p class="graph"><strong>Passions outside of work:</strong> In my free time I love to choreograph and
+                        write, mostly about subject matters that would improve the human
+                        experience/humanity. 
+                        </p>
+                        <p class="graph"> <strong>Favorite thing to do in Vegas:</strong> I have a lovely backyard and
+                            pool, and I thoroughly enjoy sitting outside taking in nature and
+                            unwinding.
+                              </p>       
+
+                
+                   <p class="graph"> <strong> Most memorable/satisfying moment in the show:</strong> It’s always very
+                    satisfying to see the look of utter joy and pride in my mother’s eyes,
+                    especially given the subject matter of the show!
+                      </p>       
+                   
+                      <br><h5><a href="#top">Back to top</a></h5>
+
+
+
+            </div>
+
+            <div class="col">
+                <img src="images/square/sq-bh-001.jpg"  style="width:100%">
+            </div>
+
+            </div>
+            </div>
+
+            <br><br>
+            <hr>
+            <br><br><br>
+
+            <div class="container">
+                <div class="row">
+                    <div id="gabryel" class="col">
+                        <img src="images/square/sq-bh-021.jpg"  style="width:100%">
+                    </div> 
+                    <div class="col">
+                        <h2 class="performer">Gabryel Nogueira Da Silva</h2>
+                            
+                        <ul>
+                            <li><strong>Show: </strong>KÀ by Cirque du Soleil</li>
+                            <li><strong>Location :</strong>MGM Grand</li>
+                            <li><strong>Years in Show: </strong>Over 14 years. I was part of the original cast</li>
+
+                        </ul>
+                        <p class="graph"><strong> Character: </strong>Court Jester. It’s an amazing role! I’ve been playing it 8 to
+                            10 times a week for the last 4 years, but all together 10 years because
+                            I was an understudy before that.
+                            </p>
+
+                            <p class="graph"><strong> Training:  </strong>Before Cirque I was performing modern and traditional circus
+                                back in São Paulo, Brazil. I went to circus school for 4 years
+                                and to martial arts school, specifically Capoeira, for 7. I also participated in lots of
+                                extracurricular activities like dance, mime, improv theatre and more.
+                                </p>
+                            <p class="graph"><strong> Passions outside of work: </strong> I love being outdoors; so things like fishing, hiking and
+                                riding motorcycles. I also love watching movies.
+                                </p>
+                            <p class="graph"><strong> Favorite thing to do in Vegas: </strong>Hanging out with my son Nikolas.</p>
+                            <p class="graph"><strong> Most satisfying moment while performing: </strong>When you get a standing ovation at
+                                the end of the show. It still gives me the chills.
+                                </p>
+
+                                <br><h5><a href="#top">Back to top</a></h5>
+
+    
+                    </div>
+    
+                
+                </div>
+                </div>
+
+<!--  ----------------------------------------------------------------------------------------------- -->
+<br><br>
+<hr>
+<br><br>
+
+
+<!-- <ul>
+    <li><strong>Show:</strong>Human</li>
+    <li><strong>Show:</strong>Human</li>
+    <li><strong>Show:</strong>Human</li>
+    <li><strong>Show:</strong>Human</li>
+
+</ul>
+    <p class="graph"><strong> work </strong>Golf</p>
+    <p class="graph"><strong> work </strong>Golf</p>
+    <p class="graph"><strong> work </strong>Golf</p>
+    <p class="graph"><strong> work </strong>Golf</p>
+ -->
+
+
+
+
+
+<script>
+    // Open the Modal
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+    
+    // Close the Modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
+
+
+</body>
+</html>
